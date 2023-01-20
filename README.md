@@ -12,7 +12,7 @@ Il fallait développer un site web en utilisant NodeJS avec le framework Express
 ### Page d'ajout de fonds
 ![home](images-readme/add-funds.png)
 
-### Page de transfer de fonds
+### Page de transfert de fonds
 ![home](images-readme/transfer.png)
 
 ### Page 404
