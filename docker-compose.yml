@@ -1,0 +1,18 @@
+services:
+  spacebank-node:
+    container_name: spacebank-node
+    build: .
+    ports:
+      - 8080:8080
+
+  spacebank-mongo:
+    container_name: spacebank-mongo
+    image: mongo
+    ports:
+      - 27017:27017
+
+  spacebank-redis:
+    container_name: spacebank-redis
+    image: redis
+    ports:
+      - 6379:6379

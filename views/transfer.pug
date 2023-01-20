@@ -1,0 +1,15 @@
+extends home-layout
+
+block homeContent
+  .home-content-container
+    .add-funds-form
+      .form-content-container
+        h1.home-form-title Transfer funds to another user
+        form(method="post" action='/home/transfer')
+          .form-group
+            .form-control
+              input(type="text" id="transfer-wallet-id" name="wallet" placeholder="Wallet ID").login-form-field
+          .form-group
+            .form-control
+              input(type="text" id="transfer-amount" name="amount" placeholder="Amount").login-form-field
+          button(type="submit").home-form-button Complete

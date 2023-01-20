@@ -1,0 +1,60 @@
+extends home-layout
+
+block homeContent
+  .home-content-container
+    h1.home-form-title Transactions history
+    .row
+      .col-4
+        .transactions-container
+          each transaction in userTransactions
+            .transaction
+              h3=transaction.date
+              .transaction-infos
+                p=transaction.type
+                p=transaction.identifier
+                p="Amount: " + transaction.amount
+      .col-8
+        canvas#transactionsGraph
+
+  script.
+    let dates = [];
+    let balances = [];
+    for (let transaction of !{JSON.stringify(userTransactions)}.reverse()) {
+        dates.push(transaction.date);
+        balances.push(transaction.currentBalance);
+    }
+
+    let ctx = document.getElementById('transactionsGraph').getContext('2d');
+    let transactionsGraph = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: dates,
+            datasets: [{
+                label: 'Balance history',
+                data: balances,
+                backgroundColor: [
+                    // 'rgba(210, 98, 91, 0.8)'
+                    'rgba(51,18,68,0.8)'
+                ],
+                borderColor: [
+                    // 'rgba(51,18,68,1)'
+                    'rgba(210, 98, 91, 0.9)'
+                ],
+                borderWidth: 3,
+                lineJoin: "round"
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+
+
+

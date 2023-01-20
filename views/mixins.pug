@@ -1,0 +1,15 @@
+
+mixin flash()
+  +flash-message(messages.success, 'success')
+  +flash-message(messages.error, 'danger')
+  +flash-message(messages.warning, 'warning')
+  +flash-message(messages.notice, 'notice')
+  +flash-message(messages.info, 'info')
+
+mixin flash-message(data, type)
+  if data
+    div.alert(class='alert-' + type)
+      ul
+        each message in data
+          if message != ""
+            li!=message

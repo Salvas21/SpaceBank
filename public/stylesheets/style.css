@@ -1,0 +1,287 @@
+@import "vendors/pure-min.css";
+@import "vendors/bootstrap.min.css";
+@import "vendors/fontawesome-free-5.15.1-web/css/all.min.css";
+@import "vendors/Chart.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import '404.css';
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Comfortaa', cursive;
+}
+
+.space-font {
+    font-family: 'Major Mono Display', monospace;
+}
+
+.login-page {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    min-width: 100%;
+    /*background: rgb(2,45,82);*/
+    /*background: linear-gradient(45deg, rgba(2,45,82,0.925) 0%, rgba(173,46,63,0.925) 100%);*/
+    /*background: rgb(27,16,69);*/
+    /*background: linear-gradient(45deg, rgba(27,16,69,0.925) 0%, rgba(171,66,45,0.925) 100%);*/
+    /*background: rgb(27,16,69);*/
+    /*background: linear-gradient(45deg, rgba(27,16,69,0.925) 0%, rgba(171,66,45,0.925) 100%);*/
+    background: rgb(18,28,68);
+    background: linear-gradient(45deg, rgba(18,28,68,0.95) 0%, rgba(173,46,63,0.90) 100%);
+}
+
+.login-page:before {
+    z-index: 1;
+    content: "";
+    display: block;
+    background: url("../images/dotgrid.png");
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.3;
+}
+
+.login-form-container {
+    z-index: 2;
+    margin: auto;
+    width: 80%;
+    height: 31.25rem;
+    border-radius: 2rem;
+    background-color: #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo-container {
+    display: flex;
+    border-top-left-radius: 1.9rem;
+    border-bottom-left-radius: 1.9rem;
+    height: 31.25rem;
+    min-height: 100%;
+    min-width: 100%;
+    background: rgb(30,18,68);
+    background: linear-gradient(45deg, rgba(30,18,68,0.92) 45%, rgba(51,18,68,0.90) 75%, rgba(63,18,68,0.90) 100%);
+}
+
+.logo-content-container {
+    margin: 8rem auto;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.logo {
+    color: rgba(210, 98, 91, 1);
+}
+
+.logo-text {
+    margin-top: 5rem;
+    font-family: 'Major Mono Display', monospace;
+    color: rgba(210, 98, 91, 1);
+    letter-spacing: 1.5rem;
+}
+
+.logo-text-uniform {
+    font-family: 'Major Mono Display', monospace;
+    color: rgba(210, 98, 91, 1);
+    letter-spacing: 1rem;
+}
+
+.login-form {
+    display: flex;
+    border-top-right-radius: 1.9rem;
+    border-bottom-right-radius: 1.9rem;
+    height: 31.25rem;
+    min-height: 100%;
+    min-width: 100%;
+    background: rgb(173,46,63);
+    background: linear-gradient(225deg, rgba(173,46,63,0.85) 45%, rgba(104,30,55,0.85) 75%, rgba(63,18,68,0.83) 100%);
+}
+
+.form-content-container {
+    font-family: 'Comfortaa', cursive;
+    color: #dddddd;
+    margin: 7rem auto;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    background: transparent !important;
+}
+
+.form-content-container > form > .form-group > .form-control {
+    background-color: transparent !important;
+    border: none;
+}
+
+.login-form-field {
+    border: none;
+    border-bottom: 1px solid #dddddd;
+    background-color: transparent;
+    font-family: 'Comfortaa', cursive;
+    width: 25rem;
+    color: #fff;
+    padding-bottom: 0.5rem;
+    padding-left: 0.2rem;
+    transition: 0.3s ease-in-out;
+}
+
+.login-form-field::placeholder {
+    color: #fff !important;
+}
+
+.login-form-field:focus-within {
+    width: 26rem;
+    border-bottom: 3px solid rgba(51,18,68,0.70);
+    outline: none;
+}
+
+.login-form-button {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem 3rem;
+    background: transparent;
+    color: #dddddd;
+    border: 1px solid #ddd;
+    transition: 0.3s ease;
+}
+
+.login-form-button:hover {
+    color: rgba(210, 98, 91, 1);
+    font-family: 'Comfortaa', cursive;
+    transition: 0.3s ease;
+    background: rgba(51,18,68,0.70);
+}
+
+.login-form-link {
+    color: #aaaaaa;
+    transition: 0.2s linear;
+}
+
+.login-form-link:hover {
+    transition: 0.2s linear;
+    color: rgba(63,18,68,1);
+    text-decoration: none;
+}
+
+.top-navbar-container {
+    background: rgb(30,18,68);
+    background: linear-gradient(45deg, rgba(30,18,68,0.92) 45%, rgba(51,18,68,0.90) 75%, rgba(63,18,68,0.90) 100%);
+    border-bottom: 2px solid rgba(210, 98, 91, 1);
+}
+
+.top-navbar-container a {
+    font-size: 0.9rem;
+}
+
+.top-navbar-container a:hover {
+    text-decoration: none;
+    color: rgba(210, 98, 91, 1) !important;
+}
+
+.top-navbar-right span {
+    color: #fff;
+    margin-right: 4rem;
+}
+
+.top-navbar-right a {
+    color: #fff;
+}
+
+.home-content-container {
+    padding: 5rem;
+    background: #fff;
+}
+
+.add-funds-form {
+    width: 40rem;
+    margin: 6rem auto;
+}
+
+.add-funds-form .login-form-field {
+    color: #000;
+    border-bottom: 1px solid #111;
+}
+
+.add-funds-form .login-form-field::placeholder {
+    color: #000 !important;
+}
+
+.add-funds-form .login-form-field:focus-within {
+    width: 26rem;
+    border-bottom: 3px solid rgba(210, 98, 91, 1);
+    outline: none;
+}
+
+.home-form-title {
+    color: rgba(210, 98, 91, 1);
+    margin-bottom: 2.5rem;
+}
+
+.home-form-button {
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    background: transparent;
+    /*border: 1px solid rgba(210, 98, 91, 1);*/
+    border: 2px solid rgba(51,18,68,0.70);
+    transition: 0.3s ease;
+}
+
+.home-form-button:hover {
+    transition: 0.3s ease;
+    background: rgba(210, 98, 91, 1);
+}
+
+.login-form-button {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem 3rem;
+    background: transparent;
+    color: #dddddd;
+    border: 1px solid #ddd;
+    transition: 0.3s ease;
+}
+
+.login-form-button:hover {
+    color: rgba(210, 98, 91, 1);
+    font-family: 'Comfortaa', cursive;
+    transition: 0.3s ease;
+    background: rgba(51,18,68,0.70);
+}
+
+.wallet-id-field {
+    margin-right: 5rem;
+}
+
+.transactions-container {
+    padding: 1rem;
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 70vh;
+    /*background: rgba(51,18,68,1);*/
+}
+
+.transaction {
+    /*background: #fff;*/
+    background: rgba(51,18,68,1);
+    margin: 1rem 0;
+    border-radius: 1.5rem;
+    padding: 1.5rem 1.75rem 0 1.75rem;
+    border: 2px solid rgba(210, 98, 91, 1);
+    color: #fff;
+}
+
+.transaction-infos {
+    border-top: 2px solid rgba(210, 98, 91, 1);
+    padding-top: 0.5rem;
+}
+
+
+
+

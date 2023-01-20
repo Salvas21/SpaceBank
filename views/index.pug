@@ -1,0 +1,24 @@
+extends layout
+block content
+  //https://dribbble.com/shots/2320096-Martian-Sign-Up-Daily-UI
+  .login-page
+    .login-form-container
+      .pure-g
+        .pure-u-1-2
+          .logo-container
+            .logo-content-container
+              i.fab.fa-bitcoin.fa-10x.logo
+              h1.logo-text SPACE BANK
+        .pure-u-1-2
+          .login-form
+            .form-content-container
+              form(method="post" action='/')
+                .form-group
+                  .form-control
+                    input(type="text" id="login-form-username" name="email" placeholder="E-mail").login-form-field
+                .form-group
+                  .form-control
+                    input(type="password" id="login-form-password" name="password" placeholder="Password").login-form-field
+                button(type="submit").login-form-button Log in
+              p="Not signed up ? "
+                a(href="/signup").login-form-link Sign up

@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  .login-page
+    .login-form-container
+      .pure-g
+        .pure-u-1-2
+          .logo-container
+            .logo-content-container
+              i.fab.fa-bitcoin.fa-10x.logo
+              h1.logo-text SPACE BANK
+
+
+        .pure-u-1-2
+          .login-form
+            .form-content-container
+              form(method="post" action='/signup')
+                .form-group
+                  .form-control
+                    input(type="text" id="signup-form-fname" name="firstName" placeholder="First name").login-form-field
+                .form-group
+                  .form-control
+                    input(type="text" id="signup-form-lname" name="lastName" placeholder="Last name").login-form-field
+                .form-group
+                  .form-control
+                    input(type="email" id="signup-form-email" name="email" placeholder="E-mail").login-form-field
+                .form-group
+                  .form-control
+                    input(type="password" id="login-form-password" name="password" placeholder="Password").login-form-field
+                button(type="submit").login-form-button Sign up
+              p="Already signed up ? "
+                a(href="/").login-form-link Log in

@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .top-navbar-container
+    nav.navbar.top-navbar.navbar-fixed-top.navbar-expand
+      .container-fluid
+        .navbar-header
+          a(href="/home").navbar-brand
+            i.fab.fa-bitcoin.fa-4x.logo
+          button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        .collapse.navbar-collapse#navbarNav
+          ul.nav.navbar-nav
+            li(class=(title === "Transactions" ? "active" : "")).nav-item
+              a(href="/home/transactions") Transactions
+            li(class=(title === "Transfer" ? "active" : "")).nav-item
+              a(href="/home/transfer") Transfer
+            li(class=(title === "Add funds" ? "active" : "")).nav-item
+              a(href="/home/add-funds") Add funds
+        .top-navbar-right.d-inline.d-flex
+          span.wallet-id-field#copyToClipboard="Wallet ID : " + userWalletId
+          span.user-info-field="Balance : " + userBalance + " BTC"
+          .nav-item
+            a(href="/home/log-out")="Log out   "
+              i.far.fa-door-open
+  block homeContent

@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .bg-purple
+    .stars
+      .custom-navbar
+        .brand-logo
+          i.fab.fa-bitcoin.fa-5x.logo
+        .navbar-links
+          h1.logo-text-uniform SPACE BANK
+
+      .central-body
+        img.image-404(src='/images/404-numbers.svg' width='300px')
+        form(method="get" action="/")
+          button(type="submit").login-form-button Go back to Earth
+      .objects
+        img.object_rocket(src='http://salehriaz.com/404Page/img/rocket.svg' width='40px')
+        .earth-moon
+          img.object_earth(src='http://salehriaz.com/404Page/img/earth.svg' width='100px')
+          img.object_moon(src='http://salehriaz.com/404Page/img/moon.svg' width='80px')
+        .box_astronaut
+          img.object_astronaut(src='http://salehriaz.com/404Page/img/astronaut.svg' width='140px')
+      .glowing_stars
+        .star
+        .star
+        .star
+        .star
+        .star

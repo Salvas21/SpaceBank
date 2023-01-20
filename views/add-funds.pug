@@ -1,0 +1,21 @@
+extends home-layout
+
+block homeContent
+  .home-content-container
+    .add-funds-form
+      .form-content-container
+        h1.home-form-title Add funds from credit card
+        form(method="post" action='/home/add-funds')
+          .form-group
+            .form-control
+              input(type="text" id="add-funds-card" name="card" placeholder="Card number" value="4815253935318792").login-form-field
+          .form-group
+            .form-control
+              input(type="text" id="add-funds-exp" name="exp" placeholder="Expiration date (YY-MM)" value="24-07").login-form-field
+          .form-group
+            .form-control
+              input(type="text" id="add-funds-ccv" name="ccv" placeholder="Card Verification Value (CVV)").login-form-field
+          .form-group
+            .form-control
+              input(type="text" id="add-funds-amount" name="amount" placeholder="Amount").login-form-field
+          button(type="submit").home-form-button Complete
